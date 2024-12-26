@@ -67,8 +67,11 @@ function addCustomMessage(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    loadMessages(); // Mesajları yükle
+
     setTimeout(() => {
         const curtain = document.getElementById('curtain');
-        curtain.style.display = 'none';
+        curtain.style.transition = 'width 1s';
+        curtain.style.width = '0';
     }, 3000);
 });
